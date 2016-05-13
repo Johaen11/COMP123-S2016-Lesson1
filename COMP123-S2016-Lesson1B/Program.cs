@@ -14,7 +14,7 @@ using System.Threading.Tasks;
  *Description: This Program demonstrates GitHub and version control 
  * best practices. We Also explore Unit Testing
  * 
- * Version: 0.4 - extracted OutputStringToConsole from GetUserName method
+ * Version: 0.6 - Refactored OutputStringToConsole
  */
 
 
@@ -24,7 +24,7 @@ namespace COMP123_S2016_Lesson1B
   *@class Program
   *
   */
-    class Program
+    public class Program
     {
         /*
          * Main Method for class Program
@@ -80,6 +80,11 @@ namespace COMP123_S2016_Lesson1B
             {
                 Console.Write(outputString);
             }
+             // refactored using the ternary operator
+            string suffixhasNewLine = hasNewLine ? "\n" : "";
+
+            Console.Write(outputString + suffixString);
+
             return outputString;
         }
     }
